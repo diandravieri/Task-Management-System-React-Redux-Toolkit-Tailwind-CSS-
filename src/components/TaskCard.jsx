@@ -1,13 +1,13 @@
 import { useDispatch } from 'react-redux';
 import { deleteTask } from '../features/tasks/tasksSlice';
 
-// Komponen TaskCard untuk menampilkan setiap task
+
 const TaskCard = ({ task }) => {
   const dispatch = useDispatch();
 
-  // Fungsi untuk menghapus task
+  
   const handleDelete = () => {
-    dispatch(deleteTask(task.id)); // Dispatch action untuk menghapus task berdasarkan id
+    dispatch(deleteTask(task.id)); 
   };
 
   return (
@@ -15,7 +15,7 @@ const TaskCard = ({ task }) => {
       <h3 className="text-lg font-bold">{task.title}</h3>
       <p className="text-sm text-gray-700">{task.description}</p>
       <p className="text-xs text-gray-500 mt-2">Priority: {task.priority}</p>
-      {/* Tombol untuk menghapus task */}
+      {}
       <button onClick={handleDelete} className="mt-2 text-red-500 text-sm">
         Delete
       </button>
